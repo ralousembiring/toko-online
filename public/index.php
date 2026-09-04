@@ -487,6 +487,180 @@ $produk = $result->fetchAll(PDO::FETCH_ASSOC);
 
 </div>
 
+<!-- ========================================
+     FLOATING WHATSAPP BUTTON
+========================================= -->
+
+<a
+    href="https://wa.me/6281933485477?text=Halo%20Admin%2C%20saya%20ingin%20bertanya%20mengenai%20produk%20di%20Toko%20Online."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat melalui WhatsApp"
+>
+
+    <!-- Logo WhatsApp -->
+    <svg
+        class="whatsapp-logo"
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+    >
+        <path
+            fill="currentColor"
+            d="M16 3C8.82 3 3 8.82 3 16c0 2.3.6 4.56 1.74 6.55L3 29l6.62-1.7A12.93 12.93 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3Zm0 23.6c-1.98 0-3.92-.53-5.62-1.54l-.4-.24-3.93 1.01 1.05-3.83-.26-.42A10.63 10.63 0 1 1 16 26.6Zm5.83-7.96c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.52-.16-.74.16-.22.33-.84 1.05-1.03 1.27-.19.22-.38.24-.7.08-.32-.16-1.35-.5-2.57-1.58-.95-.85-1.59-1.9-1.78-2.22-.19-.33-.02-.5.14-.66.15-.15.32-.38.49-.57.16-.19.22-.33.33-.55.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.33-1.14 1.11-1.14 2.71s1.17 3.14 1.33 3.36c.16.22 2.3 3.51 5.57 4.92.78.34 1.39.54 1.87.69.79.25 1.51.21 2.08.13.63-.09 1.9-.78 2.17-1.54.27-.76.27-1.41.19-1.54-.08-.13-.3-.21-.63-.37Z"
+        />
+    </svg>
+
+    <span class="whatsapp-text">
+        Chat WhatsApp
+    </span>
+
+</a>
+
+
+<style>
+
+/* ========================================
+   FLOATING WHATSAPP
+========================================= */
+
+.whatsapp-float {
+
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 13px 18px;
+
+    background: #25D366;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.25);
+
+    z-index: 9999;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+/* ========================================
+   LOGO WHATSAPP
+========================================= */
+
+.whatsapp-logo {
+
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+}
+
+
+/* ========================================
+   HOVER EFFECT
+========================================= */
+
+.whatsapp-float:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.3);
+
+}
+
+
+/* ========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .whatsapp-float {
+
+        width: 58px;
+        height: 58px;
+
+        padding: 0;
+
+        right: 15px;
+        bottom: 15px;
+
+        border-radius: 50%;
+
+    }
+
+    .whatsapp-logo {
+
+        width: 34px;
+        height: 34px;
+
+    }
+
+    .whatsapp-text {
+
+        display: none;
+
+    }
+
+}
+
+
+/* ========================================
+   ANIMASI DENYUT
+========================================= */
+
+@keyframes whatsappPulse {
+
+    0% {
+        box-shadow:
+            0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 12px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(37, 211, 102, 0);
+    }
+
+}
+
+.whatsapp-float {
+
+    animation:
+        whatsappPulse 2.5s infinite;
+
+}
+
+</style>
 
 </body>
 
